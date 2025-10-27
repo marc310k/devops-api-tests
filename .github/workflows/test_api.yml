@@ -1,0 +1,45 @@
+name: Teste e Health Check da API
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  api-test:
+    runs-on: ubuntu-latest
+
+    env:
+      API_URL: "http://localhost:3000/usuarios"
+      SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+
+    steps:
+      - name: 🧾 Checkout do código
+        uses: actions/checkout@v4
+
+      - name: 🐍 Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 📦 Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: 🚀 Subir API fake
+        run: |
+          npm install -g json-server
+          nohup json-server --watch db.json --port 3000 > server.log 2>&1 &
+          sleep 3
+
+      - name: 🧪 Testar CRUD principal
+        run: python crud_api_auth.py | tee -a pipeline.log
+
+      - name: 💓 Health Check da API
+        run: python health_check_slack.py | tee -a pipeline.log
+
+      - name: 📦 Enviar logs como artefato
+        uses: actions/upload-artifact@v4
+        with:
+          name: logs-pipeline
+          path: |
+            pipeline.log
+            server.log

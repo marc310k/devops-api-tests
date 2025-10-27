@@ -1,0 +1,17 @@
+{
+  "usuarios": [
+    { "id": 1, "nome": "Marcelo", "idade": 37 },
+    { "id": 2, "nome": "Manoella", "idade": 7 },
+    { "id": 3, "nome": "Micaella", "idade": 10 }
+  ],
+  "produtos": [
+    { "id": 1, "nome": "Mouse Logitech", "preco": 120.5 },
+    { "id": 2, "nome": "Teclado Mecânico", "preco": 299.9 },
+    { "id": 3, "nome": "Monitor Dell", "preco": 1200 }
+  ],
+  "pedidos": [
+    { "id": 1, "usuarioId": 1, "produtoId": 2, "quantidade": 1 },
+    { "id": 2, "usuarioId": 3, "produtoId": 1, "quantidade": 2 }
+  ]
+}
+
