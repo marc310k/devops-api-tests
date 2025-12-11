@@ -1,26 +1,46 @@
-# 📌 Descrição
-Explique resumidamente o que este PR faz.
+## 🧠 Resumo (gerado com Copilot)
+<!-- Peça pro Copilot:
+"Resuma este PR em 3–5 linhas, como se fosse para um Change Request / Release Note." -->
+- 
 
-# 🔗 Issue Relacionada
-- Closes #
-- Related to #
+## 📄 O que foi feito
+- 
 
-# 🧪 Como Testar
-Descreva os passos para validar a mudança localmente:
+## 🧩 Contexto do microserviço
+<!-- Peça pro Copilot:
+"Liste o nome do microserviço, camadas afetadas (API, service, repository, infra) e se há impacto em outros serviços." -->
+- Microserviço:
+- Camadas afetadas:
+- Impacto em outros serviços:
 
-1.
-2.
-3.
+## 🗄 Banco de Dados
+<!-- Peça pro Copilot:
+"Analise o repositório e o diff e responda:
+- Este microserviço usa banco de dados? Qual?
+- Este PR mexe em migrations, entidades ou scripts de DB?
+- Existem alterações potencialmente breaking?" -->
+- Tipo de banco:
+- Migrations afetadas:
+- Risco de quebra (breaking change):
 
-# 📸 Evidências (prints, logs, outputs)
-Inclua screenshots, GIFs ou logs relevantes.
+## 🔐 Configurações / Infraestrutura
+- Variáveis de ambiente novas/alteradas:
+- Arquivos de config (Helm, K8s, Terraform, etc) alterados:
+- Feature flags envolvidas:
 
-# ✔️ Checklist
-- [ ] Código testado localmente
-- [ ] Pipeline/CI passando
-- [ ] Documentação atualizada (se necessário)
-- [ ] Sem quebras ou regressões conhecidas
-- [ ] Variáveis de ambiente revisadas (se houver)
+## ✅ Testes
+- [ ] Testes unitários
+- [ ] Testes de integração
+- [ ] Testes manuais
+- [ ] Testes em ambiente TU/QA
+- Evidências de teste (prints/logs/links):
 
-# 📌 Notas Adicionais
-Inclua qualquer comentário importante para o revisor.
+## 📦 Impacto em Deploy / Release
+<!-- Bom pra RM / DevSecOps -->
+- Necessita coordenação com outro time/squad?
+- Necessita janela de manutenção?
+- Passos especiais de deploy/rollback:
+
+## 🔗 Referências
+- Jira/NEP:
+- Documentação/Confluence:
